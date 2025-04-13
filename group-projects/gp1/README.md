@@ -19,7 +19,7 @@ where **transcription** is a number from range `[1_000 .. 999_999]`, and **ext**
 Overall there are 3 data splits of 14 unique `spk_id` from **spk_A** to **spk_N** with the following amount of audio samples in each split:
 - `train/`: [**download link**](https://drive.google.com/file/d/15CpIWvVDA6mOlPxyI4-vicyXSqd-EcIb/view?usp=sharing)
     - 12,553 samples from 6 `spk_id` 
-- `dev/`: DOWNLOAD LINK TO BE PROVIDED SOON
+- `dev/`: [**download link**](https://drive.google.com/file/d/1Jlw09RSJjhJTxdN3VQj5Bph4zRNwOqSL/view?usp=sharing)
     - 2,265 samples from 10 `spk_id`
 - `test/`: not available for local development (LINK TO KAGGLE EVALUATION TO BE PROVIDED SOON)
     - 2,265 samples from all 14 `spk_id`
@@ -31,7 +31,7 @@ Please keep in mind that samplerate and file extension are not constant across a
 
 ### Project Requirements
 
-- You are required to train a model for ***16 kHz samplerate*** audio input (though you can see samplerate of 22.05 kHz and higher in training data), this way we balance a trade-off between input signals range support and model accuracy
+- You are required to train a model for ***16 kHz samplerate*** audio input (though you can see samplerate of 22.05 kHz and higher in training data), this way we balance a trade-off between input signals range support and a model accuracy
 
 - Any architecture, algorithm or training baseline could be used (e.g. open-sourced pipeline or architecture)
     - However, initialization of a model from pre-trained weights is not allowed. ***Only training from scratch*** on provided training data:
@@ -44,7 +44,7 @@ Please keep in mind that samplerate and file extension are not constant across a
 
 - You can train a KenLM language model for LM fusion and rescoring
 
-- Model training can be run offline using any available hardware resources
+- Model training can be run offline using any available hardware resources ([Google Colab](https://colab.research.google.com/), [Kaggle](https://www.kaggle.com/))
 
 - Try improving your metrics on validation split, because it is correlated with the test data
 
@@ -82,3 +82,4 @@ Please keep in mind that samplerate and file extension are not constant across a
 ### Resources
 
 - For text normalization and denormalization you can use [NeMo toolkit](https://github.com/NVIDIA/NeMo-text-processing/blob/main/tutorials/Text_(Inverse)_Normalization.ipynb) or [num2words](https://pypi.org/project/num2words/) library
+- Making models smaller and more efficient with [different types of convolutions](https://animatedai.github.io/)
